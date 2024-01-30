@@ -8,13 +8,13 @@
 body{
     
         background-image: url(./blue-bg.jpg); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
-        background-size: cover; /* Ensures the image covers the entire background */
-        background-repeat: no-repeat; /* Prevents the image from repeating */
-        background-attachment: fixed; /* Fixes the background in place while scrolling */
-        /* You can also add other background properties as needed, such as background-position */
+        background-size: cover; 
+        background-repeat: no-repeat;
+        background-attachment: fixed; 
+        
     
     
-    /* Additional styles for other elements can be added below */
+ 
     
 }
 .nav{
@@ -88,8 +88,8 @@ h4{
     
 }
 .elem{
-    height: 13rem;
-    width: 12rem;
+    height: 16rem;
+    width: 20rem;
     margin-left: 1rem;
     background-color: #F6F6F6;
     position: relative;
@@ -97,8 +97,55 @@ h4{
     box-shadow: 0 5px 10px rgba(0,0, 0,0.3);
     margin:  1rem 0.5rem;
     margin-right: 13px;
+    display: flex;
+    overflow: hidden;
     
     
+    
+}
+.elem img{
+    object-fit: cover;
+    position: absolute;
+    height: 12rem;
+    width: 20rem;
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    transition: transform 0.3s ease;
+}
+.elem img:hover{
+    transform:scale(1.1);
+}
+.elem h5{
+    position: absolute;
+   bottom: 0;
+    left: 0;
+    color: rgb(10, 10, 10);
+    
+    margin-left: 1rem;
+    margin-bottom: 1.7rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    
+}
+.elem h6{
+    position: absolute;
+   right: 0;
+    color: rgb(10, 10, 10);
+    bottom: 0;
+    margin-right: 1rem;
+    margin-bottom: 1.7rem;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    
+}
+.h5-title
+{
+    display: flex;
 }
 .cards{
     display: flex;
@@ -106,3 +153,41 @@ h4{
     
     flex-wrap: wrap; 
 }
+.link{
+    position: relative;
+    margin-right: 20px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0 5px 10px rgba(0,0, 0,0.3);
+    z-index: 1;
+    list-style: none;
+    border-radius: 5px;
+    padding: 0;
+   
+   padding: 1rem 0;
+   margin: auto;
+    transition: opacity 0.3s ease; 
+  }
+
+  .dropdown-content a {
+    color: #333;
+    padding: 12px 50px;
+    display: block;
+    text-decoration: none;
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+
+  .link:hover .dropdown-content {
+    display: block;
+  }
+  .link:hover .dropdown-content,
+    .link.active .dropdown-content {
+      display: block;
+    }
